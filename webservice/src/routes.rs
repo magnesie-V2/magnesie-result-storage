@@ -31,22 +31,24 @@ pub fn list_results(conn: DbConn) -> Json<Vec<models::Result>> {
 pub fn add_result(conn: DbConn, request: Json<models::AddResultRequest>) -> status::Accepted<()> {
     let request_result = request.into_inner();
 
-    let save_path = "/hostedFiles/results";
-    let dir = Path::new(save_path);
+    let save_path = format!("/hostedFiles/results/{}", &request_result.submission_id);
+    let dir = Path::new(save_path.as_str());
     create_dir_all(dir);
 
     let target = request_result.result_url;
     let url = Url::parse(&target).unwrap();
 
-    let child = Command::new("bash")
-        .arg("-c")
-        .arg(format!("wget {} -P {}", target, save_path)).spawn()
-        .expect("job failed to start");
     let file_name = url
         .path_segments()
         .and_then(|segments| segments.last())
         .and_then(|name| if name.is_empty() { None } else { Some(name) })
         .unwrap_or("tmp.bin");
+
+    let child = Command::new("bash")
+        .arg("-c")
+        .arg(format!("wget {} -P {} && cd {} && tar -xvf {}", &target, &save_path, &save_path, &file_name)).spawn()
+        .expect("job failed to start");
+
 
     let final_result = models::Result {
         id: request_result.submission_id,
