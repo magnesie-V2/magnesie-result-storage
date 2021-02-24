@@ -12,14 +12,14 @@ use std::path::Path;
 use reqwest::Url;
 use std::process::Command;
 
+/// Route used to check if the api is running
 #[get("/")]
 pub fn home() -> &'static str {
     "The API is up and running!"
 }
 
-/*
-Lists the new submissions at their photos
-*/
+
+/// Route that lists the results available
 #[get("/results")]
 pub fn list_results(conn: DbConn) -> Json<Vec<models::Result>> {
     let result_list = results::table.load::<models::Result>(&conn.0).expect("Couldn't load results");
@@ -27,6 +27,7 @@ pub fn list_results(conn: DbConn) -> Json<Vec<models::Result>> {
     Json(result_list.into_iter().collect::<Vec<models::Result>>())
 }
 
+/// Route to add a new result
 #[post("/result", format = "json", data = "<request>")]
 pub fn add_result(conn: DbConn, request: Json<models::AddResultRequest>) -> status::Accepted<()> {
     let request_result = request.into_inner();

@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["webservice"] = [{"text":"impl Debug for table","synthetic":false,"types":[]},{"text":"impl Debug for star","synthetic":false,"types":[]},{"text":"impl Debug for id","synthetic":false,"types":[]},{"text":"impl Debug for path","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

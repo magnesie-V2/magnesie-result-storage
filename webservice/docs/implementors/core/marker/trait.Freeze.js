@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["webservice"] = [{"text":"impl !Freeze for DbConn","synthetic":true,"types":[]},{"text":"impl Freeze for DbConnPool","synthetic":true,"types":[]},{"text":"impl Freeze for CorsFairing","synthetic":true,"types":[]},{"text":"impl Freeze for Result","synthetic":true,"types":[]},{"text":"impl Freeze for AddResultRequest","synthetic":true,"types":[]},{"text":"impl Freeze for table","synthetic":true,"types":[]},{"text":"impl Freeze for star","synthetic":true,"types":[]},{"text":"impl Freeze for id","synthetic":true,"types":[]},{"text":"impl Freeze for path","synthetic":true,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

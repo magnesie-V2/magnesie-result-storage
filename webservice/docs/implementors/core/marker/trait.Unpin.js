@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["webservice"] = [{"text":"impl Unpin for DbConn","synthetic":true,"types":[]},{"text":"impl Unpin for DbConnPool","synthetic":true,"types":[]},{"text":"impl Unpin for CorsFairing","synthetic":true,"types":[]},{"text":"impl Unpin for Result","synthetic":true,"types":[]},{"text":"impl Unpin for AddResultRequest","synthetic":true,"types":[]},{"text":"impl Unpin for table","synthetic":true,"types":[]},{"text":"impl Unpin for star","synthetic":true,"types":[]},{"text":"impl Unpin for id","synthetic":true,"types":[]},{"text":"impl Unpin for path","synthetic":true,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -3,6 +3,7 @@ use rocket::{http::Method, http::Status, Request, Response};
 
 pub struct CorsFairing;
 
+/// Allows cross origin request
 impl Fairing for CorsFairing {
     fn on_response(&self, request: &Request, response: &mut Response) {
         // Add CORS headers to allow all origins to all outgoing requests

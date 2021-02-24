@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["webservice"] = [{"text":"impl AppearsOnTable&lt;table&gt; for star","synthetic":false,"types":[]},{"text":"impl&lt;QS&gt; AppearsOnTable&lt;QS&gt; for id <span class=\"where fmt-newline\">where<br>&nbsp;&nbsp;&nbsp;&nbsp;QS: AppearsInFromClause&lt;table, Count = Once&gt;,&nbsp;</span>","synthetic":false,"types":[]},{"text":"impl&lt;QS&gt; AppearsOnTable&lt;QS&gt; for path <span class=\"where fmt-newline\">where<br>&nbsp;&nbsp;&nbsp;&nbsp;QS: AppearsInFromClause&lt;table, Count = Once&gt;,&nbsp;</span>","synthetic":false,"types":[]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
