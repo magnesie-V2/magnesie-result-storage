@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["webservice"] = [{"text":"impl Copy for table","synthetic":false,"types":[]},{"text":"impl Copy for star","synthetic":false,"types":[]},{"text":"impl Copy for id","synthetic":false,"types":[]},{"text":"impl Copy for path","synthetic":false,"types":[]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

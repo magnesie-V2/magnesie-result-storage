@@ -3,7 +3,8 @@ table! {
 
     results (id) {
         id -> Integer,
-        path -> Varchar,
+        model_path -> Varchar,
+        texture_path -> Varchar,
     }
 }
 

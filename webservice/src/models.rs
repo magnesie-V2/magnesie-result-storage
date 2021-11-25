@@ -4,7 +4,8 @@ use super::schema::{results};
 #[derive(Serialize, Deserialize, Identifiable, Queryable, Insertable)]
 pub struct Result {
     pub id: i32,
-    pub path: String,
+    pub model_path: String,
+    pub texture_path: String,
 }
 
 /// Description of a request to add a result to the database

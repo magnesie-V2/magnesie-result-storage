@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["webservice"] = [{"text":"impl !Sync for DbConn","synthetic":true,"types":[]},{"text":"impl Sync for DbConnPool","synthetic":true,"types":[]},{"text":"impl Sync for CorsFairing","synthetic":true,"types":[]},{"text":"impl Sync for Result","synthetic":true,"types":[]},{"text":"impl Sync for AddResultRequest","synthetic":true,"types":[]},{"text":"impl Sync for table","synthetic":true,"types":[]},{"text":"impl Sync for star","synthetic":true,"types":[]},{"text":"impl Sync for id","synthetic":true,"types":[]},{"text":"impl Sync for path","synthetic":true,"types":[]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["_impl_identifiable_for_result",""],["_impl_insertable_for_result",""],["_impl_queryable_for_result",""]],"struct":[["AddResultRequest","Description of a request to add a result to the database"],["Result","Description of a result"]]});
