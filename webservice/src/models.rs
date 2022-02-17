@@ -4,6 +4,7 @@ use super::schema::{results};
 #[derive(Serialize, Deserialize, Identifiable, Queryable, Insertable)]
 pub struct Result {
     pub id: i32,
+    pub name: String,
     pub model_path: String,
     pub texture_path: String,
 }
@@ -12,5 +13,6 @@ pub struct Result {
 #[derive(Serialize, Deserialize)]
 pub struct AddResultRequest {
     pub submission_id: i32,
+    pub name: String,
     pub result_url: String,
 }

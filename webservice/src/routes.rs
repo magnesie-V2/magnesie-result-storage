@@ -53,6 +53,7 @@ pub fn add_result(conn: DbConn, request: Json<models::AddResultRequest>) -> stat
 
     let final_result = models::Result {
         id: request_result.submission_id,
+        name: request_result.name,
         model_path: String::from(format!("{}/scene_dense_mesh_refine_texture.ply", &request_result.submission_id)),
         texture_path: String::from(format!("{}/scene_dense_mesh_refine_texture.png", &request_result.submission_id)),
     };

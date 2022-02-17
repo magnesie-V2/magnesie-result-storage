@@ -3,6 +3,7 @@ table! {
 
     results (id) {
         id -> Integer,
+        name -> Varchar,
         model_path -> Varchar,
         texture_path -> Varchar,
     }
