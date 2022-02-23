@@ -8,19 +8,26 @@ RUN curl https://sh.rustup.rs/ -sSf | \
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-COPY . ./
+# Build webservice dependencies
+RUN cd / && cargo new playground
+WORKDIR /playground
+COPY ./webservice/Cargo.toml /playground/
+RUN cargo build && cargo build --release && rm src/*.rs
 
-RUN cargo build --release
+# Build webservice source code
+WORKDIR /webservice
+COPY ./webservice /webservice
+RUN cargo build --release && rm -rf target/debug
 
 FROM debian
 
 RUN apt-get update && apt-get install -y default-libmysqlclient-dev libpq-dev netcat wget
 
 COPY --from=builder \
-  /target/release/webservice \
+  /webservice/target/release/webservice \
   /usr/local/bin/
 
-COPY wait-for.sh /bin/
+COPY ./webservice/wait-for.sh /bin/
 
 RUN chmod +x /bin/wait-for.sh
 

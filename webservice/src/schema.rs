@@ -6,6 +6,7 @@ table! {
         name -> Varchar,
         model_path -> Varchar,
         texture_path -> Varchar,
+        total_consumption_joules -> Integer,
     }
 }
 

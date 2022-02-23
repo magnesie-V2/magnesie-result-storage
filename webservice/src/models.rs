@@ -7,6 +7,7 @@ pub struct Result {
     pub name: String,
     pub model_path: String,
     pub texture_path: String,
+    pub total_consumption_joules: i32,
 }
 
 /// Description of a request to add a result to the database
